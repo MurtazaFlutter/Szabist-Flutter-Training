@@ -13,8 +13,8 @@ class ContainerWidget extends StatelessWidget {
         centerTitle: true,
       ),
       body: const SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
+        scrollDirection: Axis.vertical,
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ContainerExample(color: Colors.red),
@@ -23,12 +23,11 @@ class ContainerWidget extends StatelessWidget {
             SizedBox(width: 10),
             ContainerExample(color: Colors.orange),
             SizedBox(width: 10),
-            ContainerExample(color: Colors.deepPurple)
+            ContainerExample(color: Colors.deepPurple),
+            Text("This is Column Widget"),
           ],
         ),
       ),
     );
   }
 }
-
-
