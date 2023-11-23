@@ -8,5 +8,6 @@ class Todo {
     this.name,
     this.desc,
     this.isCompleted = false,
+    required String title,
   });
 }

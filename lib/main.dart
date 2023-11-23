@@ -1,9 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/controllers/todo.dart';
+import 'package:todo/firebase_options.dart';
 import 'package:todo/screens/todo/todo.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: ((context) => TodoController()))
   ], child: const MyApp()));

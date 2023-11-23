@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "2664223364",
+    "project_id": "todofire-98391",
+    "storage_bucket": "todofire-98391.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2664223364:android:720397fab63df9df81a8d1",
+        "android_client_info": {
+          "package_name": "com.example.todo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb7OZ79Y_NJJlpbVNqCPXNO0i68F6x45o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

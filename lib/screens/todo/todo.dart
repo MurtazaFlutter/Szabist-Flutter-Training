@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/controllers/todo.dart';
+import 'package:todo/services/db_helper.dart';
 
 class TodoApp extends StatelessWidget {
   TodoApp({super.key});
@@ -53,7 +54,7 @@ class TodoApp extends StatelessWidget {
                     Consumer<TodoController>(builder: (context, todo, child) {
                       return ElevatedButton(
                         onPressed: () {
-                          todo.addTodo(
+                          DBHelper().addTodo(
                               _titleController.text, _descController.text);
                           _titleController.clear();
                           _descController.clear();
