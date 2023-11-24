@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/controllers/todo.dart';
 import 'package:todo/firebase_options.dart';
-import 'package:todo/screens/todo/todo.dart';
+import 'package:todo/screens/animation.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: TodoApp(),
+      home: const MyCustomForm(),
     );
   }
 }

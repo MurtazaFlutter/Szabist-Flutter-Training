@@ -1,9 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/controllers/todo.dart';
 import 'package:todo/models/todo.dart';
-import 'package:todo/services/db_helper.dart';
 
 class TodoApp extends StatelessWidget {
   TodoApp({super.key});
@@ -78,7 +76,7 @@ class TodoApp extends StatelessWidget {
               stream: todo.getTodosStream(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return const CircularProgressIndicator();
+                  return const Center(child: CircularProgressIndicator());
                 } else if (snapshot.data == null || snapshot.data!.isEmpty) {
                   return const Center(
                     child: Text("no data"),
@@ -91,7 +89,6 @@ class TodoApp extends StatelessWidget {
                   return ListView.builder(
                       itemCount: snapshot.data!.length,
                       itemBuilder: (context, index) {
-                        //final data = todo.todos[index];
                         final data = snapshot.data![index];
 
                         return Container(
